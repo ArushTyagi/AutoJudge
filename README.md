@@ -84,14 +84,25 @@ RBF SVM
 
 Random Forest Classifier
 
-Ordinal Classifier (Custom) ⭐
+Ordinal Classifier was used with the best model
 
 ✔ Ordinal classification respects the natural ordering:
 
 Easy < Medium < Hard
 
+Ordinal Classification Report:
 
-✔ The best-performing classifier is selected using Balanced Accuracy.
+                  precision recall f1-score   support
+
+        Easy       0.45      0.42      0.44       121
+        Hard       0.58      0.79      0.67       388
+      Medium        0.42      0.23      0.30       281
+
+    accuracy                            0.53       790
+   macro avg       0.48      0.48      0.47       790
+weighted avg       0.51      0.53      0.50       790
+
+
 
 
 
@@ -110,6 +121,11 @@ Random Forest Regressor
 Gradient Boosting Regressor
 
 ✔ The best regressor is selected based on MAE (Mean Absolute Error).
+GradientBoostingRegressor(best model)
+   MAE  = 1.6736
+   RMSE = 1.9792
+   R²   = 0.1237
+
 
 
 📈 Evaluation Metrics
@@ -170,6 +186,9 @@ venv\Scripts\activate   # On Windows
 
 3️⃣ Install Dependencies
 pip install -r requirements.txt
+python -m training.classifier_compare
+python -m training.regressor_compare
+
 
 4️⃣ Run the Web Interface
 streamlit run ui/app.py
