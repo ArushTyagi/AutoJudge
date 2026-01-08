@@ -155,6 +155,4 @@ if st.button("🔍 Predict Difficulty"):
         st.write(f"**Difficulty Class:** `{difficulty}`")
         st.write(f"**Difficulty Score:** `{score:.2f}`")
 
-        st.subheader("📈 Confidence Signals")
-        st.write(f"Easy probability: `{easy_prob:.2f}`")
-        st.write(f"Hard probability: `{hard_prob:.2f}`")
+       
