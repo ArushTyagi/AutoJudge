@@ -1,0 +1,766 @@
+numpy
+scipy
+scikit-learn
+joblib
+PS D:\dev\Autojudge> & D:/dev/Autojudge/venv/Scripts/Activate.ps1
+(venv) PS D:\dev\Autojudge> python -m training.classifier
+>> 
+Loaded 4112 problems
+➡️ Starting feature extraction
+✅ Feature extraction done
+➡️ Starting model training
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+✅ Model training done
+
+🎯 Accuracy: 0.4835965978128797
+
+📊 Confusion Matrix:
+ [[ 64  43  46]
+ [ 48 232 109]
+ [ 45 134 102]]
+
+🧾 Classification Report:
+               precision    recall  f1-score   support
+
+        Easy       0.41      0.42      0.41       153
+        Hard       0.57      0.60      0.58       389
+      Medium       0.40      0.36      0.38       281
+
+    accuracy                           0.48       823
+   macro avg       0.46      0.46      0.46       823
+weighted avg       0.48      0.48      0.48       823
+
+
+✅ Revised classifier trained and saved successfully.
+(venv) PS D:\dev\Autojudge> python -m training.classifier
+>>
+Loaded 4112 problems
+➡️ Starting feature extraction
+✅ Feature extraction done
+➡️ Starting model training
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+✅ Model training done
+
+🎯 Accuracy: 0.4823815309842041
+
+📊 Confusion Matrix:
+ [[ 64  43  46]
+ [ 48 232 109]
+ [ 46 134 101]]
+
+🧾 Classification Report:
+               precision    recall  f1-score   support
+
+        Easy       0.41      0.42      0.41       153
+        Hard       0.57      0.60      0.58       389
+      Medium       0.39      0.36      0.38       281
+
+    accuracy                           0.48       823
+   macro avg       0.46      0.46      0.46       823
+weighted avg       0.48      0.48      0.48       823
+
+
+✅ Revised classifier trained and saved successfully.
+(venv) PS D:\dev\Autojudge> python -m training.classifier
+Loaded 4112 problems
+➡️ Starting feature extraction
+✅ Feature extraction done
+➡️ Starting model training
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+✅ Model training done
+
+🎯 Accuracy: 0.4787363304981774
+
+📊 Confusion Matrix:
+ [[ 82  30  41]
+ [ 67 211 111]
+ [ 58 122 101]]
+
+🧾 Classification Report:
+               precision    recall  f1-score   support
+
+        Easy       0.40      0.54      0.46       153
+        Hard       0.58      0.54      0.56       389
+      Medium       0.40      0.36      0.38       281
+
+    accuracy                           0.48       823
+   macro avg       0.46      0.48      0.47       823
+weighted avg       0.48      0.48      0.48       823
+
+
+✅ Revised classifier trained and saved successfully.
+(venv) PS D:\dev\Autojudge> python -m training.classifier
+Loaded 4112 problems
+➡️ Starting feature extraction
+✅ Feature extraction done
+➡️ Starting model training
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+✅ Model training done
+
+🎯 Accuracy: 0.4787363304981774
+
+📊 Confusion Matrix:
+ [[ 82  30  41]
+ [ 67 211 111]
+ [ 58 122 101]]
+
+🧾 Classification Report:
+               precision    recall  f1-score   support
+
+        Easy       0.40      0.54      0.46       153
+        Hard       0.58      0.54      0.56       389
+      Medium       0.40      0.36      0.38       281
+
+    accuracy                           0.48       823
+   macro avg       0.46      0.48      0.47       823
+weighted avg       0.48      0.48      0.48       823
+
+
+✅ Revised classifier trained and saved successfull.
+(venv) PS D:\dev\Autojudge> python -m training.classifier
+>>
+Loaded 4112 problems
+➡️ Starting feature extraction
+✅ Feature extraction done
+➡️ Starting model training
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+✅ Model training done
+
+🎯 Accuracy: 0.49817739975698666
+
+📊 Confusion Matrix:
+ [[ 90  25  38]
+ [ 56 219 114]
+ [ 52 128 101]]
+
+🧾 Classification Report:
+               precision    recall  f1-score   support
+
+        Easy       0.45      0.59      0.51       153
+        Hard       0.59      0.56      0.58       389
+      Medium       0.40      0.36      0.38       281
+
+    accuracy                           0.50       823
+   macro avg       0.48      0.50      0.49       823
+weighted avg       0.50      0.50      0.50       823
+
+
+✅ Final classifier trained and saved successfully.
+(venv) PS D:\dev\Autojudge> python -m training.ordinal_classifier
+>>
+(venv) PS D:\dev\Autojudge> python -m training.ordinal_classifier
+>>
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+➡️ Training Easy-vs-Rest classifier
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+➡️ Training Hard-vs-Rest classifier
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+
+🎯 Ordinal Accuracy: 0.4957472660996355
+
+🧾 Ordinal Classification Report:
+
+              precision    recall  f1-score   support
+
+        Easy       0.41      0.59      0.48       153
+        Hard       0.61      0.59      0.60       389
+      Medium       0.39      0.31      0.34       281
+
+    accuracy                           0.50       823
+   macro avg       0.47      0.50      0.48       823
+weighted avg       0.50      0.50      0.49       823
+
+
+✅ Ordinal classifier trained and saved.
+(venv) PS D:\dev\Autojudge> python -m training.ordinal_classifier
+>>
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+➡️ Training Easy-vs-Rest classifier
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+➡️ Training Hard-vs-Rest classifier
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+
+🎯 Accuracy: 0.46537059538274606
+🎯 Balanced Accuracy: 0.47041003127768494
+
+🧾 Classification Report:
+
+              precision    recall  f1-score   support
+
+        Easy       0.48      0.41      0.44       153
+        Hard       0.67      0.35      0.46       389
+      Medium       0.37      0.65      0.47       281
+
+    accuracy                           0.47       823
+   macro avg       0.51      0.47      0.46       823
+weighted avg       0.54      0.47      0.46       823
+
+
+✅ Final ordinal classifier trained and saved.
+(venv) PS D:\dev\Autojudge> python -m training.ordinal_classifier
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+➡️ Training Easy-vs-Rest classifier
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+➡️ Training Hard-vs-Rest classifier
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+
+✅ Optimal thresholds learned:
+Easy threshold  = 0.6000000000000001
+Hard threshold  = 0.44999999999999996
+Validation Balanced Accuracy = 0.462
+
+🎯 Accuracy: 0.49696233292831105
+🎯 Balanced Accuracy: 0.467325692664223
+
+🧾 Classification Report:
+
+              precision    recall  f1-score   support
+
+        Easy       0.50      0.40      0.44       153
+        Hard       0.58      0.61      0.60       389
+      Medium       0.38      0.39      0.38       281
+
+    accuracy                           0.50       823
+   macro avg       0.49      0.47      0.47       823
+weighted avg       0.50      0.50      0.50       823
+
+
+✅ Final auto-threshold ordinal classifier saved.
+(venv) PS D:\dev\Autojudge> python -m training.ordinal_classifier
+>>
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+➡️ Training Easy-vs-Rest classifier
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+➡️ Training Hard-vs-Rest classifier
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+
+✅ Optimal thresholds learned:
+Easy threshold = 0.6000000000000001
+Hard threshold = 0.39999999999999997
+Validation Balanced Accuracy = 0.473
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+
+📊 Cross-Validation Balanced Accuracy:
+Mean = 0.461
+Std  = 0.016
+
+🎯 Test Accuracy: 0.48602673147023084
+🎯 Test Balanced Accuracy: 0.44543876744766503
+
+🧾 Classification Report:
+
+              precision    recall  f1-score   support
+
+        Easy       0.49      0.38      0.43       153
+        Hard       0.56      0.68      0.61       389
+      Medium       0.34      0.28      0.31       281
+
+    accuracy                           0.49       823
+   macro avg       0.46      0.45      0.45       823
+weighted avg       0.47      0.49      0.47       823
+
+
+✅ Final ordinal classifier with CV saved.
+(venv) PS D:\dev\Autojudge> python -m training.regressor
+>>
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+➡️ Training regression model
+✅ Model training done
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\dev\Autojudge\training\regressor.py", line 67, in <module>
+    rmse = mean_squared_error(y_test, y_pred, squared=False)
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 196, in wrapper
+    params = func_sig.bind(*args, **kwargs)
+  File "C:\Python313\Lib\inspect.py", line 3295, in bind
+    return self._bind(args, kwargs)
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\inspect.py", line 3284, in _bind
+    raise TypeError(
+        'got an unexpected keyword argument {arg!r}'.format(
+            arg=next(iter(kwargs))))
+TypeError: got an unexpected keyword argument 'squared'
+(venv) PS D:\dev\Autojudge> python -m training.regressor
+>>
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+➡️ Training regression model
+✅ Model training done
+
+📊 Test Metrics
+MAE  = 1.6360
+RMSE = 1.9857
+R²   = 0.1785
+
+📊 Cross-Validation MAE
+Mean = 1.6612
+Std  = 0.0310
+
+✅ Difficulty score regressor trained and saved successfully.
+(venv) PS D:\dev\Autojudge> 
+(venv) PS D:\dev\Autojudge> python -m training.regressor
+>>
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+
+📉 Baseline MAE (mean predictor): 1.8756
+➡️ Training regression model
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\dev\Autojudge\training\regressor.py", line 71, in <module>
+    reg.fit(X_train, y_train)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\base.py", line 1336, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\ensemble\_hist_gradient_boosting\gradient_boosting.py", line 566, in fit
+    X, known_categories = self._preprocess_X(X, reset=True)
+                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\ensemble\_hist_gradient_boosting\gradient_boosting.py", line 276, in _preprocess_X
+    X = validate_data(self, X, **check_X_kwargs)
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\validation.py", line 2902, in validate_data
+    out = check_array(X, input_name="X", **check_params)
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\validation.py", line 981, in check_array
+    array = _ensure_sparse_format(
+        array,
+    ...<6 lines>...
+        input_name=input_name,
+    )
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\validation.py", line 602, in _ensure_sparse_format        
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Sparse data was passed for X, but dense data is required. Use '.toarray()' to convert to a dense numpy array.
+(venv) PS D:\dev\Autojudge> python -m training.regressor
+>>
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+
+📉 Baseline MAE (mean predictor): 1.8756
+➡️ Training regression model
+✅ Model training done
+
+📊 Test Metrics (Original Scale)
+MAE  = 1.7694
+RMSE = 2.1189
+R²   = 0.0647
+(venv) PS D:\dev\Autojudge> python -m training.regressor_compare
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+
+📉 Baseline MAE: 1.8756
+
+🚀 Training & Evaluating Models
+
+➡️ ElasticNet
+   MAE  = 1.8491
+   RMSE = 2.1981
+   R²   = -0.0065
+
+➡️ HuberRegressor
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_huber.py:348: ConvergenceWarning: lbfgs failed to converge after 500 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=500).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+   MAE  = 2.1870
+   RMSE = 2.7870
+   R²   = -0.6181
+
+➡️ SGDRegressor(Huber)
+   MAE  = 2.0402
+   RMSE = 2.4878
+   R²   = -0.2893
+
+➡️ RandomForest
+   MAE  = 1.7694
+   RMSE = 2.1189
+   R²   = 0.0647
+
+🏆 Best Model: RandomForest
+📊 Metrics: (1.7693766894006873, np.float64(2.1189183547811856), 0.06466955212310477)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\dev\Autojudge\training\regressor_compare.py", line 123, in <module>
+    X_tr, X_va = X[train_idx], X[val_idx]
+                 ~^^^^^^^^^^^
+TypeError: 'coo_matrix' object is not subscriptable
+(venv) PS D:\dev\Autojudge> python -m training.regressor_compare
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+
+📉 Baseline MAE: 1.8756
+
+🚀 Training & Evaluating Models
+
+➡️ ElasticNet
+   MAE  = 1.8491
+   RMSE = 2.1981
+   R²   = -0.0065
+
+➡️ HuberRegressor
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_huber.py:348: ConvergenceWarning: lbfgs failed to converge after 2000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=2000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+   MAE  = 2.2696
+   RMSE = 2.9250
+   R²   = -0.7823
+
+➡️ SGDRegressor(Huber)
+   MAE  = 2.0402
+   RMSE = 2.4878
+   R²   = -0.2893
+
+➡️ RandomForest
+   MAE  = 1.7694
+   RMSE = 2.1189
+   R²   = 0.0647
+
+🏆 Best Model: RandomForest
+📊 Metrics: (1.7693766894006873, np.float64(2.1189183547811856), 0.06466955212310477)
+
+📊 Cross-Validation MAE (Best Model)
+Mean = 1.7282
+Std  = 0.0410
+
+✅ Best noise-aware regressor saved successfully.
+(venv) PS D:\dev\Autojudge> python -m training.classifier_compare
+>>  
+D:\dev\Autojudge\venv\Scripts\python.exe: No module named training.classifier_compare
+(venv) PS D:\dev\Autojudge> python -m training.classifier_compare
+D:\dev\Autojudge\venv\Scripts\python.exe: No module named training.classifier_compare
+(venv) PS D:\dev\Autojudge> python -m training.classifier_compare
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\dev\Autojudge\training\classifier_compare.py", line 44, in <module>
+    X_train, X_test, y_train, y_test = train_test_split(
+                                       ~~~~~~~~~~~~~~~~^
+        X,
+        ^^
+    ...<3 lines>...
+        stratify=labels
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2921, in train_test_split      
+    arrays = indexable(*arrays)
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\validation.py", line 521, in indexable
+    check_consistent_length(*result)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\validation.py", line 464, in check_consistent_length      
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Found input variables with inconsistent numbers of samples: [3948, 4112]
+(venv) PS D:\dev\Autojudge> python -m training.classifier_compare
+Loaded 4112 problems
+After noise removal: 3948 problems
+➡️ Extracting features
+✅ Feature extraction done
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\dev\Autojudge\training\classifier_compare.py", line 60, in <module>
+    X_train, X_test, y_train, y_test = train_test_split(
+                                       ~~~~~~~~~~~~~~~~^
+        X,
+        ^^
+    ...<3 lines>...
+        stratify=labels
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2921, in train_test_split      
+    arrays = indexable(*arrays)
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\validation.py", line 521, in indexable
+    check_consistent_length(*result)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\validation.py", line 464, in check_consistent_length      
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Found input variables with inconsistent numbers of samples: [3794, 3948]
+(venv) PS D:\dev\Autojudge> python -m training.classifier_compare
+Loaded 4112 problems
+➡️ Extracting features (with noise removal)
+✅ Feature extraction done
+After noise removal: 3948 problems
+
+🚀 Training & Evaluating Standard Classifiers
+
+➡️ Logistic Regression
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+Accuracy          = 0.503
+Balanced Accuracy = 0.492
+
+➡️ Linear SVM
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+Accuracy          = 0.495
+Balanced Accuracy = 0.446
+
+➡️ RBF SVM
+Accuracy          = 0.490
+Balanced Accuracy = 0.478
+
+➡️ Random Forest
+Accuracy          = 0.504
+Balanced Accuracy = 0.420
+
+
+⭐ Training Ordinal Classifier
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+Accuracy          = 0.538
+Balanced Accuracy = 0.486
+
+📊 Ordinal Classification Report:
+
+              precision    recall  f1-score   support
+
+        Easy       0.46      0.43      0.44       121
+        Hard       0.59      0.79      0.67       388
+      Medium       0.43      0.24      0.31       281
+
+    accuracy                           0.54       790
+   macro avg       0.49      0.49      0.47       790
+weighted avg       0.51      0.54      0.51       790
+
+
+🏁 FINAL MODEL COMPARISON
+
+Logistic Regression    | Acc = 0.503 | Bal Acc = 0.492
+Linear SVM             | Acc = 0.495 | Bal Acc = 0.446
+RBF SVM                | Acc = 0.490 | Bal Acc = 0.478
+Random Forest          | Acc = 0.504 | Bal Acc = 0.420
+Ordinal Classifier     | Acc = 0.538 | Bal Acc = 0.486
+(venv) PS D:\dev\Autojudge> python -m training.classifier_compare
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+After noise removal: 3948 problems
+
+🚀 Training & Evaluating Standard Classifiers
+
+➡️ Logistic Regression
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+Accuracy          = 0.503
+Balanced Accuracy = 0.492
+
+➡️ Linear SVM
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+Accuracy          = 0.495
+Balanced Accuracy = 0.446
+
+➡️ RBF SVM
+Accuracy          = 0.490
+Balanced Accuracy = 0.478
+
+➡️ Random Forest
+Accuracy          = 0.504
+Balanced Accuracy = 0.420
+
+🏆 Best Standard Classifier: Logistic Regression
+✅ Best standard classifier saved
+
+⭐ Training Ordinal Classifier
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_logistic.py:1184: FutureWarning: 'n_jobs' has no effect since 1.8 and will be removed in 1.10. You provided 'n_jobs=-1', please leave it unspecified.
+  warnings.warn(msg, category=FutureWarning)
+
+📊 Ordinal Classification Report:
+
+              precision    recall  f1-score   support
+
+        Easy       0.46      0.43      0.44       121
+        Hard       0.59      0.79      0.67       388
+      Medium       0.43      0.24      0.31       281
+
+    accuracy                           0.54       790
+   macro avg       0.49      0.49      0.47       790
+weighted avg       0.51      0.54      0.51       790
+
+✅ Ordinal classifier components saved
+
+🎉 ALL MODELS SAVED SUCCESSFULLY
+(venv) PS D:\dev\Autojudge> python -m training.regressor_compare
+>>
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\dev\Autojudge\training\regressor_compare.py", line 46, in <module>
+    X_train, X_test, y_train, y_test, y_raw_train, y_raw_test = train_test_split(
+                                                                ~~~~~~~~~~~~~~~~^
+        X, y, y_raw, test_size=0.2, random_state=42
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2921, in train_test_split      
+    arrays = indexable(*arrays)
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\validation.py", line 521, in indexable
+    check_consistent_length(*result)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\validation.py", line 464, in check_consistent_length      
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Found input variables with inconsistent numbers of samples: [3948, 4112, 4112]
+(venv) PS D:\dev\Autojudge> python -m training.regressor_compare
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\dev\Autojudge\training\regressor_compare.py", line 46, in <module>
+    X_train, X_test, y_train, y_test, y_raw_train, y_raw_test = train_test_split(
+                                                                ~~~~~~~~~~~~~~~~^
+        X, y, y_raw, test_size=0.2, random_state=42
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\model_selection\_split.py", line 2921, in train_test_split      
+    arrays = indexable(*arrays)
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\validation.py", line 521, in indexable
+    check_consistent_length(*result)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "D:\dev\Autojudge\venv\Lib\site-packages\sklearn\utils\validation.py", line 464, in check_consistent_length      
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: Found input variables with inconsistent numbers of samples: [3948, 4112, 4112]
+(venv) PS D:\dev\Autojudge> python -m training.regressor_compare
+Loaded 4112 problems
+➡️ Extracting features
+✅ Feature extraction done
+After noise removal: 3948 problems
+
+📉 Baseline MAE (mean predictor): 1.8042
+
+🚀 Training & Evaluating Regression Models
+
+➡️ LinearRegression
+   MAE  = 2.9443
+   RMSE = 3.7138
+   R²   = -2.0854
+   💾 Saved as models/LinearRegression.pkl
+
+➡️ ElasticNet
+   MAE  = 1.7552
+   RMSE = 2.0603
+   R²   = 0.0504
+   💾 Saved as models/ElasticNet.pkl
+
+➡️ HuberRegressor
+D:\dev\Autojudge\venv\Lib\site-packages\sklearn\linear_model\_huber.py:348: ConvergenceWarning: lbfgs failed to converge after 500 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=500).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+  self.n_iter_ = _check_optimize_result("lbfgs", opt_res, self.max_iter)
+   MAE  = 2.0331
+   RMSE = 2.5362
+   R²   = -0.4389
+   💾 Saved as models/HuberRegressor.pkl
+
+➡️ RandomForestRegressor
+   MAE  = 1.6936
+   RMSE = 1.9905
+   R²   = 0.1137
+   💾 Saved as models/RandomForestRegressor.pkl
+
+➡️ GradientBoostingRegressor
+   MAE  = 1.6570
+   RMSE = 1.9652
+   R²   = 0.1360
+   💾 Saved as models/GradientBoostingRegressor.pkl
+
+🏆 Best Regressor: GradientBoostingRegressor
+📉 Best MAE: 1.6570
+✅ Best regressor ALSO saved as models/best_regressor.pkl
+
+🏁 REGRESSION MODEL COMPARISON SUMMARY
+
+LinearRegression           | MAE = 2.9443
+ElasticNet                 | MAE = 1.7552
+HuberRegressor             | MAE = 2.0331
+RandomForestRegressor      | MAE = 1.6936
+GradientBoostingRegressor  | MAE = 1.6570
+(venv) PS D:\dev\Autojudge>           
