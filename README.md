@@ -2,6 +2,7 @@
 Important - https://autojudge-sjwz8euutbxwrogida9jg5.streamlit.app/
 use this link to access the portal ... It is already deployed using streamlit
 
+video link - https://drive.google.com/file/d/1TEWnwUciO3IGObT8NuJtxwC60jU9nue8/view?usp=sharing
 
 
 🧠 AutoJudge: Predicting Programming Problem Difficulty
