@@ -18,15 +18,11 @@ from sklearn.preprocessing import LabelEncoder
 from features.feature_engineering import build_features_train
 
 
-# ======================================================
-# SETUP
-# ======================================================
+
 os.makedirs("models", exist_ok=True)
 
 
-# ======================================================
-# LOAD DATA
-# ======================================================
+
 data = []
 with open("data/problems_data.jsonl", "r", encoding="utf-8") as f:
     for line in f:
@@ -40,9 +36,7 @@ labels_all = np.array(
 print(f"Loaded {len(data)} problems")
 
 
-# ======================================================
-# FEATURE EXTRACTION (noise handled inside)
-# ======================================================
+
 print("➡️ Extracting features")
 X, word_tfidf, char_tfidf, scaler = build_features_train(data)
 print("✅ Feature extraction done")
@@ -51,9 +45,9 @@ labels = labels_all[:X.shape[0]]
 print(f"After noise removal: {X.shape[0]} problems")
 
 
-# ======================================================
+
 # TRAIN / TEST SPLIT
-# ======================================================
+
 X_train, X_test, y_train, y_test = train_test_split(
     X,
     labels,
@@ -63,17 +57,17 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 
-# ======================================================
+
 # LABEL ENCODING
-# ======================================================
+
 le = LabelEncoder()
 y_train_enc = le.fit_transform(y_train)
 y_test_enc = le.transform(y_test)
 
 
-# ======================================================
+
 # MODELS TO COMPARE
-# ======================================================
+
 models = OrderedDict({
     "LogisticRegression": LogisticRegression(
         max_iter=3000,
@@ -103,9 +97,9 @@ models = OrderedDict({
 })
 
 
-# ======================================================
+
 # TRAIN, EVALUATE & SAVE ALL STANDARD CLASSIFIERS
-# ======================================================
+
 results = {}
 trained_models = {}
 
@@ -131,9 +125,8 @@ for name, model in models.items():
     print(f"   💾 Saved as models/{name}.pkl\n")
 
 
-# ======================================================
 # SELECT & SAVE BEST STANDARD CLASSIFIER
-# ======================================================
+
 best_model_name = max(results, key=results.get)
 best_model = trained_models[best_model_name]
 
@@ -145,9 +138,9 @@ joblib.dump(le, "models/label_encoder.pkl")
 print("✅ Best standard classifier saved as models/best_classifier.pkl")
 
 
-# ======================================================
-# ORDINAL CLASSIFIER (STANDOUT)
-# ======================================================
+
+# ORDINAL CLASSIFIER 
+
 print("\n⭐ Training Ordinal Classifier")
 
 y_train_easy = np.array([1 if y == "Easy" else 0 for y in y_train])
@@ -184,18 +177,14 @@ print("\n📊 Ordinal Classification Report:\n")
 print(classification_report(y_test, ordinal_preds))
 
 
-# ======================================================
-# SAVE ORDINAL CLASSIFIER COMPONENTS
-# ======================================================
+
 joblib.dump(clf_easy, "models/ordinal_easy.pkl")
 joblib.dump(clf_hard, "models/ordinal_hard.pkl")
 
 print("✅ Ordinal classifier components saved")
 
 
-# ======================================================
-# SAVE PREPROCESSING OBJECTS (CRITICAL FOR UI)
-# ======================================================
+
 joblib.dump(word_tfidf, "models/word_tfidf.pkl")
 joblib.dump(char_tfidf, "models/char_tfidf.pkl")
 joblib.dump(scaler, "models/scaler.pkl")
@@ -203,9 +192,7 @@ joblib.dump(scaler, "models/scaler.pkl")
 print("✅ Preprocessing objects saved")
 
 
-# ======================================================
-# FINAL SUMMARY
-# ======================================================
+
 print("\n🏁 CLASSIFIER TRAINING COMPLETE\n")
 
 for name, bal in results.items():

@@ -16,9 +16,9 @@ from features.feature_engineering import (
 )
 
 
-# ======================================================
+
 # LOAD MODELS & PREPROCESSORS
-# ======================================================
+
 @st.cache_resource
 def load_models():
     best_regressor = joblib.load("models/best_regressor.pkl")
@@ -56,9 +56,9 @@ def load_models():
 ) = load_models()
 
 
-# ======================================================
+
 # FEATURE BUILDER (INFERENCE)
-# ======================================================
+
 def build_features_for_ui(text):
     text = preprocess_text(text)
 
@@ -86,9 +86,9 @@ def build_features_for_ui(text):
 
 
 
-# ======================================================
+
 # STREAMLIT UI
-# ======================================================
+
 st.set_page_config(page_title="AutoJudge", layout="centered")
 
 st.title("🧠 AutoJudge")

@@ -19,15 +19,6 @@ import os
 os.makedirs("models", exist_ok=True)
 
 
-
-
-
-
-
-
-# ======================================================
-# LOAD DATA
-# ======================================================
 data = []
 with open("data/problems_data.jsonl", "r", encoding="utf-8") as f:
     for line in f:
@@ -42,22 +33,18 @@ scores_all = np.array(
 print(f"Loaded {len(data)} problems")
 
 
-# ======================================================
-# FEATURE EXTRACTION (NOISE REMOVAL HAPPENS HERE ONLY)
-# ======================================================
+
 print("➡️ Extracting features")
 X, word_tfidf, char_tfidf, scaler = build_features_train(data)
 print("✅ Feature extraction done")
 
-# 🔑 ALIGN TARGET WITH X
+
 scores = scores_all[:X.shape[0]]
 
 print(f"After noise removal: {X.shape[0]} problems")
 
 
-# ======================================================
-# TRAIN / TEST SPLIT
-# ======================================================
+
 X_train, X_test, y_train, y_test = train_test_split(
     X,
     scores,
@@ -66,18 +53,14 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 
-# ======================================================
-# BASELINE (MEAN PREDICTOR)
-# ======================================================
+
 baseline_pred = np.full_like(y_test, y_train.mean())
 baseline_mae = mean_absolute_error(y_test, baseline_pred)
 
 print(f"\n📉 Baseline MAE (mean predictor): {baseline_mae:.4f}")
 
 
-# ======================================================
-# MODELS TO COMPARE
-# ======================================================
+
 models = OrderedDict({
     "LinearRegression": LinearRegression(),
 
@@ -109,9 +92,7 @@ models = OrderedDict({
 })
 
 
-# ======================================================
-# TRAIN, EVALUATE & SAVE ALL MODELS
-# ======================================================
+
 results = {}
 trained_models = {}
 
@@ -147,9 +128,9 @@ for name, model in models.items():
     print(f"   💾 Saved as models/{name}.pkl\n")
 
 
-# ======================================================
+
 # SELECT & SAVE BEST REGRESSOR
-# ======================================================
+
 best_model_name = min(results, key=results.get)
 best_model = trained_models[best_model_name]
 
@@ -159,9 +140,7 @@ print(f"📉 Best MAE: {results[best_model_name]:.4f}")
 joblib.dump(best_model, "models/best_regressor.pkl")
 print("✅ Best regressor ALSO saved as models/best_regressor.pkl")
 
-# ==============================
-# SAVE PREPROCESSING OBJECTS
-# ==============================
+
 
 
 joblib.dump(word_tfidf, "models/word_tfidf.pkl")
@@ -170,9 +149,7 @@ joblib.dump(scaler, "models/scaler.pkl")
 
 print("✅ Preprocessing objects saved")
 
-# ======================================================
-# FINAL SUMMARY
-# ======================================================
+
 print("\n🏁 REGRESSION MODEL COMPARISON SUMMARY\n")
 
 for name, mae in results.items():

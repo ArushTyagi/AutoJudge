@@ -8,9 +8,7 @@ from sklearn.preprocessing import RobustScaler
 from scipy.sparse import hstack
 
 
-# ======================================================
-# 1. SAFE UTILITIES
-# ======================================================
+
 
 def safe_text(x):
     """Handle missing / null text fields safely."""
@@ -25,9 +23,7 @@ def safe_log(x):
     return math.log1p(max(x, 0))
 
 
-# ======================================================
-# 2. NOISE-AWARE TEXT PREPROCESSING
-# ======================================================
+
 
 BOILERPLATE_PATTERNS = [
     r"time limit.*",
@@ -70,9 +66,7 @@ def combine_fields(row: dict) -> str:
     return preprocess_text(combined)
 
 
-# ======================================================
-# 3. ADVANCED HANDCRAFTED DIFFICULTY SIGNALS
-# ======================================================
+
 
 ALGO_KEYWORDS = {
     "dp": ["dp", "dynamic programming"],
@@ -177,9 +171,7 @@ def extract_numeric_features(text: str):
 
 
 
-# ======================================================
-# 4. NOISY SAMPLE DETECTION (TEXT-ONLY)
-# ======================================================
+
 
 def detect_noisy_samples(texts):
     """
@@ -206,21 +198,21 @@ def build_features_train(data):
         X, word_tfidf, char_tfidf, scaler
     """
 
-    # -------------------------------
+    
     # Combine + preprocess text
-    # -------------------------------
+   
     texts = [combine_fields(row) for row in data]
 
-    # -------------------------------
+   
     # Remove noisy samples (TEXT-ONLY)
-    # -------------------------------
+   
     valid_mask = detect_noisy_samples(texts)
     texts = [t for t, keep in zip(texts, valid_mask) if keep]
     data = [row for row, keep in zip(data, valid_mask) if keep]
 
-    # -------------------------------
+    
     # WORD TF-IDF (SEMANTIC)
-    # -------------------------------
+    
     word_tfidf = TfidfVectorizer(
         max_features=5000,
         ngram_range=(1, 2),
@@ -230,9 +222,9 @@ def build_features_train(data):
         stop_words="english"
     )
 
-    # -------------------------------
+    
     # CHAR TF-IDF (SYNTAX / FORMAT)
-    # -------------------------------
+    
     char_tfidf = TfidfVectorizer(
         analyzer="char",
         ngram_range=(3, 5),
@@ -246,9 +238,9 @@ def build_features_train(data):
 
     X_text = hstack([X_word, X_char])
 
-    # -------------------------------
+   
     # NUMERIC FEATURES (ROBUST)
-    # -------------------------------
+   
     X_num_raw = np.array(
         [extract_numeric_features(t) for t in texts],
         dtype=np.float64
@@ -257,9 +249,9 @@ def build_features_train(data):
     scaler = RobustScaler()
     X_num = scaler.fit_transform(X_num_raw)
 
-    # -------------------------------
+   
     # FINAL FEATURE MATRIX
-    # -------------------------------
+   
     X = hstack([X_text, X_num]).tocsr()
 
     return X, word_tfidf, char_tfidf, scaler
