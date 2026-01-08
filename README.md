@@ -32,11 +32,8 @@ problem_class (Easy / Medium / Hard)
 
 problem_score (numerical difficulty)
 
-⚠️ Note:
-The dataset is not included in this repository to keep it lightweight.
-Only the trained models and preprocessing artifacts are stored.
-
 🧠 Approach & Methodology
+
 1️⃣ Data Preprocessing & Noise Handling
 
 Combined all text fields into a single input
@@ -46,6 +43,7 @@ Cleaned text (lowercasing, symbol normalization)
 Removed noisy or inconsistent samples
 
 Handled missing values safely
+
 
 2️⃣ Feature Engineering (Text-Only)
 
@@ -73,6 +71,7 @@ Input grammar complexity
 
 Failure-awareness signals (warnings, edge cases)
 
+
 3️⃣ Classification Models (Difficulty Class)
 
 The following models were trained and compared:
@@ -94,6 +93,8 @@ Easy < Medium < Hard
 
 ✔ The best-performing classifier is selected using Balanced Accuracy.
 
+
+
 4️⃣ Regression Models (Difficulty Score)
 
 The following regressors were trained and compared:
@@ -109,6 +110,7 @@ Random Forest Regressor
 Gradient Boosting Regressor
 
 ✔ The best regressor is selected based on MAE (Mean Absolute Error).
+
 
 📈 Evaluation Metrics
 Classification
@@ -128,6 +130,8 @@ RMSE (Root Mean Squared Error)
 R² Score
 
 Baseline comparisons are used to ensure meaningful improvement.
+
+
 
 🌐 Web Interface
 
