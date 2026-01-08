@@ -186,7 +186,9 @@ venv\Scripts\activate   # On Windows
 
 3️⃣ Install Dependencies
 pip install -r requirements.txt
+
 python -m training.classifier_compare
+
 python -m training.regressor_compare
 
 
